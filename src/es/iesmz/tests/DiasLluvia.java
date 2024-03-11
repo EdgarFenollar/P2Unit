@@ -83,14 +83,24 @@ public class DiasLluvia {
         }
     }
 
-    private int primerDiaLluvioso() {
+    public int primerDiaLluvioso() {
         for (int i = 0; i < diasLluvia.length; i++) {
             for (int j = 0; j < diasLluvia[i].length; j++) {
                 if (diasLluvia[i][j]) {
-                    return (i + 1) * 31 + j + 1;
+                    int diaDelAnyo = j + 1;
+                    for (int k = 0; k < i; k++) {
+                        diaDelAnyo += diasEnMes(k);
+                    }
+                    return diaDelAnyo;
                 }
             }
         }
         return -1;
     }
+
+    private int diasEnMes(int mes) {
+        int[] diasPorMes = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        return diasPorMes[mes];
+    }
+
 }

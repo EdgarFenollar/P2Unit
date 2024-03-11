@@ -54,4 +54,19 @@ public class DiasLluviaTest {
         diasLluvia.registroDia(12, 1, false);
         assertEquals(4, diasLluvia.contarDiasLluviosos());
     }
+
+    @Test
+    public void testPrimerDiaLluvioso() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(1, 1, true);
+        assertEquals(1, diasLluvia.primerDiaLluvioso());
+    }
+
+    @Test
+    public void testPrimerDiaLluvioso_noLluvia() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        diasLluvia.registroDia(1, 1, false);
+        assertEquals(-1, diasLluvia.primerDiaLluvioso());
+    }
+
 }
