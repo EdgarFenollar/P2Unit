@@ -69,4 +69,16 @@ public class DiasLluviaTest {
         assertEquals(-1, diasLluvia.primerDiaLluvioso());
     }
 
+    @Test
+    void registroDia_limiteMes() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        assertTrue(diasLluvia.registroDia(31, 1, true));
+        assertFalse(diasLluvia.registroDia(32, 1, true));
+    }
+
+    @Test
+    void consultarDia_diaNoRegistrado() {
+        DiasLluvia diasLluvia = new DiasLluvia();
+        assertFalse(diasLluvia.consultarDia(15, 2));
+    }
 }

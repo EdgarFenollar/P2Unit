@@ -39,7 +39,7 @@ public class DiasLluvia {
         return cont;
     }
 
-    private int trimestreLluvioso(){
+    public int trimestreLluvioso(){
         int cont1 = 0, cont2 = 0, cont3 = 0,cont4 = 0;
 
         for (int i = 0; i < diasLluvia.length; i++) {
