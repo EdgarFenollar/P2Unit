@@ -39,4 +39,47 @@ public class DiasLluvia {
         return cont;
     }
 
+    private int trimestreLluvioso(){
+        int cont1 = 0, cont2 = 0, cont3 = 0,cont4 = 0;
+
+        for (int i = 0; i < diasLluvia.length; i++) {
+            for (int j = 0; j < diasLluvia[i].length; j++) {
+                if (diasLluvia[0][j]){
+                    cont1++;
+                } else if (diasLluvia[1][j]){
+                    cont1++;
+                } else if (diasLluvia[2][j]){
+                    cont1++;
+                } else if (diasLluvia[3][j]){
+                    cont2++;
+                } else if (diasLluvia[4][j]){
+                    cont2++;
+                } else if (diasLluvia[5][j]){
+                    cont2++;
+                } else if (diasLluvia[6][j]){
+                    cont3++;
+                } else if (diasLluvia[7][j]){
+                    cont3++;
+                } else if (diasLluvia[8][j]) {
+                    cont3++;
+                }else if (diasLluvia[9][j]){
+                    cont4++;
+                } else if (diasLluvia[10][j]){
+                    cont4++;
+                } else {
+                    cont4++;
+                }
+            }
+        }
+
+        if (cont1 > cont2 && cont1 > cont3 && cont1 > cont4){
+            return 1;
+        } else if (cont2 > cont3 && cont2 > cont4){
+            return 2;
+        } else if (cont3 > cont4){
+            return 3;
+        } else {
+            return 4;
+        }
+    }
 }
