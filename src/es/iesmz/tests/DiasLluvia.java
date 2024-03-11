@@ -26,7 +26,7 @@ public class DiasLluvia {
         }
     }
 
-    private int contarDiasLluviosos (){
+    public int contarDiasLluviosos(){
         int cont = 0;
 
         for (int i = 0; i < diasLluvia.length; i++) {
