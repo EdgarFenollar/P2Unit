@@ -82,4 +82,15 @@ public class DiasLluvia {
             return 4;
         }
     }
+
+    private int primerDiaLluvioso() {
+        for (int i = 0; i < diasLluvia.length; i++) {
+            for (int j = 0; j < diasLluvia[i].length; j++) {
+                if (diasLluvia[i][j]) {
+                    return (i + 1) * 31 + j + 1;
+                }
+            }
+        }
+        return -1;
+    }
 }
