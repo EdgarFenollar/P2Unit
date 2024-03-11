@@ -16,4 +16,13 @@ public class DiasLluvia {
             return true;
         }
     }
+
+    private boolean consultarDia (int dia,int mes){
+        if (mes < 1 || mes > 12 || dia < 1 || dia > 31){
+            System.out.println("La fecha es incorrecta.");
+            return false;
+        } else {
+            return diasLluvia[mes - 1][dia - 1];
+        }
+    }
 }
